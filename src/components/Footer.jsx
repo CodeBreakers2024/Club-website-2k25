@@ -17,19 +17,19 @@ const Footer = () => {
             <div className='hidden md:flex justify-center items-center'>
               <img src="tcb-characters.webp" alt="" className='h-auto w-48 sm:w-60 md:w-40 lg:w-70'/>
             </div>
-            <div className='flex flex-col md:flex-row justify-center md:justify-start lg:justify-center items-center md:items-start gap-6 md:gap-4 lg:gap-15 xl:gap-20 2xl:gap-25'>
-              <div className='flex flex-col gap-1 md:gap-1.5 lg:gap-2 justify-start items-center md:items-start'>
+            <div className='flex flex-col md:flex-row justify-center md:justify-start lg:justify-center items-center md:items-start gap-8 md:gap-10 lg:gap-14 xl:gap-16 2xl:gap-18'>
+              <div className='flex flex-col gap-2 md:gap-2.5 lg:gap-3 justify-start items-center md:items-start'>
                 <div className='font-["Oxanium"] font-bold text-xl sm:text-2xl md:text-lg lg:text-2xl text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'>Explore</div>
-                <ul className='text-sm md:text-xs lg:text-base text-center md:text-left'>
+                <ul className='text-sm md:text-xs lg:text-base text-center md:text-left space-y-2 md:space-y-1.5 lg:space-y-2'>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/">Home</Link></li>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/about">About</Link></li>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/achievements">Achievements</Link></li>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/events">Events</Link></li>
                 </ul>
               </div>
-              <div className='flex flex-col gap-1 md:gap-1.5 lg:gap-2 justify-start items-center md:items-start'>
+              <div className='flex flex-col gap-2 md:gap-2.5 lg:gap-3 justify-start items-center md:items-start'>
                 <div className='font-["Oxanium"] font-bold text-xl sm:text-2xl md:text-lg lg:text-2xl text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'>Follow Us</div>
-                <ul className='flex flex-col gap-1'>
+                <ul className='flex flex-col gap-2 sm:gap-2.5'>
                   <li><Link href="https://www.instagram.com/thecodebreakers/" target="_blank" rel="noopener noreferrer"><ButtonFooter image="instagramFooter.svg" text="@thecodebreakers" /></Link></li>
                   <li><Link href="https://www.linkedin.com/company/thecodebreakers-rcoem/" target="_blank" rel="noopener noreferrer"><ButtonFooter image="LinkedinFooter.svg" text="@thecodebreakers" /></Link></li>
                   <li><Link href="https://x.com/CodebreakersRBU" target="_blank" rel="noopener noreferrer"><ButtonFooter image="xFooter.svg" text="@CodebreakersRBU" /></Link></li>
@@ -37,7 +37,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='w-full text-center pt-5 text-xs sm:text-sm md:text-base font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'>© 2025 TheCodeBreakers All rights reserved.</div>
+          <div className='w-full text-center pt-6 text-xs sm:text-sm md:text-base font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'>© 2025 TheCodeBreakers All rights reserved.</div>
         </div>
     </footer>
   )

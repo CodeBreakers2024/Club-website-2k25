@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 export default function Capsule({activeTab, setActiveTab}) {
 
   return(
@@ -12,9 +16,21 @@ export default function Capsule({activeTab, setActiveTab}) {
                         >
                             {activeTab === "tech" && (
                                 <>
-                                    <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-full buttonBorder"></div>
-                                    <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-full m-[1.2px] bg-black"></div>
-                                    <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-full m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"></div>
+                                    <motion.div 
+                                        layoutId="buttonBorder"
+                                        className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-full buttonBorder"
+                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                    />
+                                    <motion.div 
+                                        layoutId="buttonBg"
+                                        className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-full m-[1.2px] bg-black"
+                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                    />
+                                    <motion.div 
+                                        layoutId="buttonGradient"
+                                        className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-full m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"
+                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                    />
                                 </>
                             )}
                             <span className="relative z-4">Tech</span>
@@ -28,9 +44,21 @@ export default function Capsule({activeTab, setActiveTab}) {
                         >
                             {activeTab === "nontech" && (
                                 <>
-                                    <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-full buttonBorder"></div>
-                                    <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-full m-[1.2px] bg-black"></div>
-                                    <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-full m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"></div>
+                                    <motion.div 
+                                        layoutId="buttonBorder"
+                                        className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-full buttonBorder"
+                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                    />
+                                    <motion.div 
+                                        layoutId="buttonBg"
+                                        className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-full m-[1.2px] bg-black"
+                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                    />
+                                    <motion.div 
+                                        layoutId="buttonGradient"
+                                        className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-full m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"
+                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                    />
                                 </>
                             )}
                             <span className="relative z-4">Non Tech</span>
