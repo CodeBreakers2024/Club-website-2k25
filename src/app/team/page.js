@@ -81,10 +81,10 @@ export default function TeamPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#073445] via-black to-black opacity-40" />
           
           {/* Cyan glow top left */}
-          <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#41bfb7] rounded-full blur-[120px] opacity-12" />
+          <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#41bfb7b2] lg:bg-[#41bfb7] rounded-full blur-[120px] opacity-12" />
           
           {/* Teal glow top right */}
-          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#15e7e1] rounded-full blur-[120px] opacity-10" />
+          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#15e7e0a0] lg:bg-[#15e7e1] rounded-full blur-[120px] opacity-10" />
           
           {/* Bottom left accent */}
           <div className="absolute -bottom-20 -left-40 w-[500px] h-[500px] bg-[#41bfb7] rounded-full blur-[140px] opacity-8" />
@@ -102,7 +102,7 @@ export default function TeamPage() {
           
           {/* Diagonal accent lines */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(135deg,transparent_48%,rgba(65,191,183,0.3)_49%,rgba(65,191,183,0.3)_51%,transparent_52%)] bg-[size:300px_300px]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(135deg,transparent_48%,rgba(65,191,183,0.2)_49%,rgba(65,191,183,0.2)_51%,transparent_52%)] lg:bg-[linear-gradient(135deg,transparent_48%,rgba(65,191,183,0.3)_49%,rgba(65,191,183,0.3)_51%,transparent_52%)] bg-[size:300px_300px]" />
           </div>
           
           {/* Vignette effect */}

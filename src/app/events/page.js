@@ -131,16 +131,16 @@ export default function EventsPage() {
         {/* Layered Gradient Background - Variation 3 */}
         <div className="absolute inset-0">
           {/* Base */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#041a21] via-black to-[#073445] opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#041a21] via-black to-[#073445] opacity-30 lg:opacity-50" />
           
           {/* Top right dominant glow */}
-          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-[#41bfb7] rounded-full blur-[160px] opacity-12" />
+          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-[#41bfb7] rounded-full blur-[160px] opacity-8 lg:opacity-12" />
           
           {/* Bottom left accent */}
-          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#15e7e1] rounded-full blur-[130px] opacity-10" />
+          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#15e7e1] rounded-full blur-[130px] opacity-5 lg:opacity-10" />
           
           {/* Middle accent */}
-          <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-[#073445] rounded-full blur-[140px] opacity-25" />
+          <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-[#073445] rounded-full blur-[140px] opacity-15 lg:opacity-25" />
           
           {/* Grid with diagonal fade */}
           <div className="absolute inset-0 opacity-12 [mask-image:linear-gradient(135deg,black_0%,transparent_100%)]">
