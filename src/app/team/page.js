@@ -3,18 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/data/teamData.json";
-import LiquidEther from "@/components/home/LiquidEther";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
-
-const icons = [
-    { src: "/icons/react.svg", x: -450, y: 50, mobileX: -130, mobileY: -140, showOnMobile: true },
-    { src: "/icons/java.svg", x: 550, y: -120, mobileX: 130, mobileY: -140, showOnMobile: true },
-    { src: "/icons/nodejs.svg", x: -300, y: 250, mobileX: -130, mobileY: 180, showOnMobile: true },
-    { src: "/icons/figma.svg", x: 650, y: 250, mobileX: 130, mobileY: 180, showOnMobile: true },
-    { src: "/icons/rust.svg", x: -100, y: -100, mobileX: 0, mobileY: 0, showOnMobile: false },
-    { src: "/icons/python.svg", x: 350, y: 250, mobileX: 0, mobileY: 0, showOnMobile: false },
-];
 
 function TeamMemberCard({ member }) {
   return (
@@ -28,14 +16,14 @@ function TeamMemberCard({ member }) {
       <div className="rounded-[1.25rem] overflow-hidden relative lg:p-6 max-lg:p-4 z-4 w-full h-full flex flex-col items-center justify-center">
         {/* Profile Image */}
         <div className="backdrop-blur-[7.5px] backdrop-filter overflow-hidden rounded-full lg:w-[141px] lg:h-[141px] max-lg:w-[110px] max-lg:h-[110px] relative lg:mb-6 max-lg:mb-4">
-          <Image 
-            src={member.imageUrl} 
-            alt={member.name} 
-            fill 
+          <Image
+            src={member.imageUrl}
+            alt={member.name}
+            fill
             className="object-cover"
           />
         </div>
-        
+
         {/* Name and Role */}
         <div className="flex flex-col lg:gap-2 max-lg:gap-1.5 text-center lg:mb-6 max-lg:mb-4">
           <h3 className="text-white lg:text-[24px] max-lg:text-[20px] font-medium m-0 leading-normal">
@@ -45,7 +33,7 @@ function TeamMemberCard({ member }) {
             {member.role}
           </p>
         </div>
-        
+
         {/* Social Icons */}
         <div className="flex items-center lg:gap-5 max-lg:gap-3">
           <Link href={member.githubUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform">
@@ -82,124 +70,60 @@ function TeamCategoryCard({ title }) {
 }
 
 
-export default function AboutPage() {
-  const iconRefs = useRef([]);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-    
-    iconRefs.current.forEach((el, i) => {
-      if (!el) return;
-
-      // Skip animation for mobile-hidden icons
-      if (isMobile && !icons[i].showOnMobile) {
-        gsap.set(el, { opacity: 0, scale: 0 });
-        return;
-      }
-
-      const targetX = isMobile ? icons[i].mobileX : icons[i].x;
-      const targetY = isMobile ? icons[i].mobileY : icons[i].y;
-
-      // Snap quickly from center to final position
-      gsap.set(el, { x: 0, y: 0, opacity: 0, scale: 0 });
-      gsap.to(el, {
-        x: targetX,
-        y: targetY,
-        opacity: 1,
-        scale: 1,
-        delay: i * 0.1,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-      });
-
-      // Subtle random floating around final position
-      const float = () => {
-        gsap.to(el, {
-          x: targetX + gsap.utils.random(-15, 15),
-          y: targetY + gsap.utils.random(-15, 15),
-          rotation: gsap.utils.random(-8, 8),
-          duration: 1 + Math.random() * 0.5,
-          ease: "sine.inOut",
-          onComplete: float, // keep looping
-        });
-      };
-      float();
-
-      // Hover effects (desktop only)
-      if (!isMobile) {
-        el.addEventListener("mouseenter", () => {
-          gsap.to(el, { scale: 1.1, duration: 0.3, ease: "power2.out" });
-        });
-        el.addEventListener("mouseleave", () => {
-          gsap.to(el, { scale: 1, duration: 0.3, ease: "power2.out" });
-        });
-      }
-    });
-  }, []);
-
+export default function TeamPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center min-h-screen h-screen bg-black overflow-hidden text-white bg-cover">
-        {/* Floating Tech Icons */}
-        <div className="absolute w-full h-full flex items-center justify-center z-9">
-          {icons.map((icon, i) => (
-            <div
-              key={i}
-              ref={(el) => (iconRefs.current[i] = el)}
-              className="absolute cursor-pointer hidden md:block"
-            >
-              <Image
-                src={icon.src}
-                alt="icon"
-                width={300}
-                height={300}
-                className="drop-shadow-lg select-none w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-48 lg:h-48 xl:w-[300px] xl:h-[300px] opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-80"
-                draggable="false"
-              />
-            </div>
-          ))}
+      <section className="relative flex items-center justify-center min-h-screen bg-black overflow-hidden text-white">
+        {/* Layered Gradient Background */}
+        <div className="absolute inset-0">
+          {/* Base dark gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#073445] via-black to-black opacity-40" />
+          
+          {/* Cyan glow top left */}
+          <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#41bfb7] rounded-full blur-[120px] opacity-12" />
+          
+          {/* Teal glow top right */}
+          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#15e7e1] rounded-full blur-[120px] opacity-10" />
+          
+          {/* Bottom left accent */}
+          <div className="absolute -bottom-20 -left-40 w-[500px] h-[500px] bg-[#41bfb7] rounded-full blur-[140px] opacity-8" />
+          
+          {/* Bottom right accent */}
+          <div className="absolute -bottom-20 -right-40 w-[500px] h-[500px] bg-[#073445] rounded-full blur-[140px] opacity-18" />
+          
+          {/* Center accent glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#073445] rounded-full blur-[150px] opacity-28" />
+          
+          {/* Subtle grid overlay */}
+          <div className="absolute inset-0 opacity-[0.12]">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(65,191,183,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(65,191,183,0.18)_1px,transparent_1px)] bg-[size:100px_100px]" />
+          </div>
+          
+          {/* Diagonal accent lines */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(135deg,transparent_48%,rgba(65,191,183,0.3)_49%,rgba(65,191,183,0.3)_51%,transparent_52%)] bg-[size:300px_300px]" />
+          </div>
+          
+          {/* Vignette effect */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
+        </div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 text-center flex flex-col items-center lg:py-24 max-lg:py-16 px-4 sm:px-8 gap-6 w-full max-w-screen-xl mx-auto">
+          {/* Main Heading */}
+          <h1 className="font-['Oxanium'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-[linear-gradient(60deg,_#02232A,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#02232A)] bg-clip-text text-transparent">
+            Our Team
+          </h1>
+
+          {/* Description */}
+          <p className="font-['Montserrat'] text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl text-transparent bg-[linear-gradient(180deg,_#FFF_0%,_#999_100%)] bg-clip-text leading-relaxed">
+            Passionate individuals united by innovation, dedication, and a shared vision to break codes and create minds.
+          </p>
         </div>
 
-        {/* Hero Text */}
-        <div className="text-center flex flex-col items-center z-10 px-4 sm:px-8 md:px-6 gap-4 sm:gap-5 md:gap-6 w-full max-w-screen-xl mx-auto">
-          <h1 className="font-['Oxanium'] text-[1.75rem] leading-[1.15] xs:text-[2rem] sm:text-[2.5rem] md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight bg-[linear-gradient(60deg,_#02232A,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#02232A)] bg-clip-text text-transparent whitespace-nowrap">
-            The Codebreakers Club
-          </h1>
-          <p className="font-['Montserrat'] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-transparent bg-[linear-gradient(180deg,_#FFF_0%,_#999_70%)] bg-clip-text px-2 sm:px-0">
-            Breaking Codes, Creating Minds
-          </p>
-          <button 
-            onClick={() => {
-              document.getElementById('our-team')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="flex gap-1 justify-center items-center relative py-2.5 px-4.5 lg:py-2.5 lg:px-4.5 rounded-3xl w-fit hover:scale-105 active:scale-95 transition-transform duration-200 cursor-pointer touch-manipulation min-h-[44px]"
-          >
-            <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-3xl buttonBorder"></div>
-            <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-3xl m-[1.2px] bg-black"></div>
-            <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-3xl m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"></div>
-            <p className="font-['Montserrat'] text-sm font-semibold text-white z-4">Explore Now</p>
-          </button>
-        </div>
-        <div className="absolute w-full h-full flex items-center justify-center">
-          <LiquidEther
-            colors={['#073445', '#41bfb7', '#073445']}
-            mouseForce={20}
-            cursorSize={100}
-            isViscous={true}
-            viscous={30}
-            iterationsViscous={32}
-            iterationsPoisson={32}
-            resolution={0.5}
-            isBounce={true}
-            autoDemo={true}
-            autoSpeed={0.3}
-            autoIntensity={3}
-            takeoverDuration={1}
-            autoResumeDelay={1000}
-            autoRampDuration={0.6}
-          />
-        </div>
+        {/* Bottom Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-[linear-gradient(180deg,_transparent_0%,_#000000_100%)]" />
       </section>
 
       {/* Our Team Section */}

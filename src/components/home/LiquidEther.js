@@ -84,9 +84,17 @@ export default function LiquidEther({
       }
       init(container) {
         this.container = container;
-        this.pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+        // Reduce pixel ratio for better performance, especially on mobile
+        this.isMobile = window.innerWidth < this.breakpoint;
+        this.pixelRatio = this.isMobile ? 1 : Math.min(window.devicePixelRatio || 1, 1.5);
         this.resize();
-        this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        this.renderer = new THREE.WebGLRenderer({ 
+          antialias: !this.isMobile, // Disable antialiasing on mobile for performance
+          alpha: true,
+          powerPreference: "high-performance", // Prefer performance over quality
+          stencil: false, // Disable stencil buffer if not needed
+          depth: false // Disable depth buffer if not needed
+        });
         this.renderer.autoClear = false;
         this.renderer.setClearColor(new THREE.Color(0x000000), 0);
         this.renderer.setPixelRatio(this.pixelRatio);
@@ -132,6 +140,8 @@ export default function LiquidEther({
         this.takeoverFrom = new THREE.Vector2();
         this.takeoverTo = new THREE.Vector2();
         this.onInteract = null;
+        this.lastMoveTime = 0;
+        this.moveThrottle = 16; // ~60fps throttle for mouse move
         this._onMouseMove = this.onDocumentMouseMove.bind(this);
         this._onTouchStart = this.onDocumentTouchStart.bind(this);
         this._onTouchMove = this.onDocumentTouchMove.bind(this);
@@ -195,6 +205,11 @@ export default function LiquidEther({
         this.mouseMoved = true;
       }
       onDocumentMouseMove(event) {
+        // Throttle mouse move events for better performance
+        const now = performance.now();
+        if (now - this.lastMoveTime < this.moveThrottle) return;
+        this.lastMoveTime = now;
+        
         if (!this.updateHoverState(event.clientX, event.clientY)) return;
         if (this.onInteract) this.onInteract();
         if (this.isAutoActive && !this.hasUserControl && !this.takeoverActive) {
@@ -943,7 +958,14 @@ export default function LiquidEther({
         this.init();
         this._loop = this.loop.bind(this);
         this._resize = this.resize.bind(this);
-        window.addEventListener('resize', this._resize);
+        this._resizeTimeout = null;
+        this._debouncedResize = () => {
+          if (this._resizeTimeout) clearTimeout(this._resizeTimeout);
+          this._resizeTimeout = setTimeout(() => {
+            this._resize();
+          }, 150); // Debounce resize by 150ms
+        };
+        window.addEventListener('resize', this._debouncedResize);
         this._onVisibility = () => {
           const hidden = document.hidden;
           if (hidden) {
@@ -988,7 +1010,8 @@ export default function LiquidEther({
       }
       dispose() {
         try {
-          window.removeEventListener('resize', this._resize);
+          if (this._resizeTimeout) clearTimeout(this._resizeTimeout);
+          window.removeEventListener('resize', this._debouncedResize);
           document.removeEventListener('visibilitychange', this._onVisibility);
           Mouse.dispose();
           if (Common.renderer) {

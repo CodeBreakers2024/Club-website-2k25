@@ -21,7 +21,7 @@ export default function EventsPage() {
 
   // Memoize snap points calculation
   const snapPoints = useMemo(() => {
-    return Array.from({ length: numberOfEvents }, (_, i) => 
+    return Array.from({ length: numberOfEvents }, (_, i) =>
       i / Math.max(numberOfEvents - 1, 1)
     );
   }, [numberOfEvents]);
@@ -37,7 +37,7 @@ export default function EventsPage() {
     if (window.innerWidth < 768 && lastEventTitleRef.current && eventsContainerRef.current) {
       const containerRect = eventsContainerRef.current.getBoundingClientRect();
       const titleRect = lastEventTitleRef.current.getBoundingClientRect();
-      
+
       // Height from container start to end of last event title
       const heightToTitle = titleRect.bottom - containerRect.top + 8; // 8px for padding
       setTimelineHeight(`${heightToTitle}px`);
@@ -64,7 +64,7 @@ export default function EventsPage() {
         scrollTrigger: {
           trigger: eventsSection,
           scroller: "body",
-          start: "top -5%",
+          start: "top 5%",
           end: () => `+=${scrollDistance * 1.5}`,
           pin: true,
           scrub: 1,
@@ -82,13 +82,13 @@ export default function EventsPage() {
     } else {
       // Mobile: Simple scroll with fade-in animations
       const eventCards = Array.from(eventsContainer.querySelectorAll('[role="article"]'));
-      
+
       eventCards.forEach((card, index) => {
         gsap.fromTo(
           card,
-          { 
-            opacity: 0, 
-            y: 50 
+          {
+            opacity: 0,
+            y: 50
           },
           {
             opacity: 1,
@@ -126,8 +126,47 @@ export default function EventsPage() {
 
   return (
     <div className="relative min-h-screen">
-      <section 
-        ref={eventsSectionRef} 
+      {/* Hero Section */}
+      <section className="relative flex items-center justify-center min-h-screen bg-black overflow-hidden text-white">
+        {/* Layered Gradient Background - Variation 3 */}
+        <div className="absolute inset-0">
+          {/* Base */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#041a21] via-black to-[#073445] opacity-50" />
+          
+          {/* Top right dominant glow */}
+          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-[#41bfb7] rounded-full blur-[160px] opacity-12" />
+          
+          {/* Bottom left accent */}
+          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#15e7e1] rounded-full blur-[130px] opacity-10" />
+          
+          {/* Middle accent */}
+          <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-[#073445] rounded-full blur-[140px] opacity-25" />
+          
+          {/* Grid with diagonal fade */}
+          <div className="absolute inset-0 opacity-12 [mask-image:linear-gradient(135deg,black_0%,transparent_100%)]">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(65,191,183,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(65,191,183,0.2)_1px,transparent_1px)] bg-[size:90px_90px]" />
+          </div>
+          
+          {/* Subtle scanlines */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(65,191,183,0.3)_50%)] bg-[size:100%_4px]" />
+          </div>
+        </div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 text-center flex flex-col items-center lg:py-24 max-lg:py-16 px-4 sm:px-8 gap-6 w-full max-w-screen-xl mx-auto">
+          <h1 className="font-['Oxanium'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-[linear-gradient(60deg,_#02232A,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#C1C1C1,_#02232A)] bg-clip-text text-transparent">
+            Events at TCB
+          </h1>
+          <p className="font-['Montserrat'] text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl text-transparent bg-[linear-gradient(180deg,_#FFF_0%,_#999_100%)] bg-clip-text leading-relaxed">
+            Discover the exciting events, workshops, and activities that bring our community together.
+          </p>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-[linear-gradient(180deg,_transparent_0%,_#000000_100%)]" />
+      </section>
+
+      <section
+        ref={eventsSectionRef}
         className="
           eventsection 
           w-full 
@@ -135,33 +174,16 @@ export default function EventsPage() {
           flex flex-col 
           justify-center 
           items-center 
-          pt-[15vh] sm:pt-[18vh] lg:pt-[20vh] 
+          pt-[12vh] sm:pt-[14vh] lg:pt-[16vh] 
           pb-[12vh] sm:pb-[14vh] lg:pb-[16vh] 
           px-4 sm:px-6 md:px-0
+          bg-black
         "
         aria-label="Events section"
       >
-        {/* Section Title */}
-        <h2 
-          className="
-            pb-8 sm:pb-10 lg:pb-20 
-            text-center 
-            text-3xl sm:text-4xl lg:text-5xl 
-            font-bold 
-            font-['Oxanium'] 
-            text-transparent 
-            !bg-clip-text 
-            [background:linear-gradient(rgba(0,_0,_0,_0.2),_rgba(0,_0,_0,_0.2)),_linear-gradient(180deg,_#fff,_#999)] 
-            [-webkit-background-clip:text] 
-            [-webkit-text-fill-color:transparent]
-          "
-        >
-          Events at TCB
-        </h2>
-
         {/* Events Container */}
-        <div 
-          ref={eventsContainerRef} 
+        <div
+          ref={eventsContainerRef}
           className="
             events 
             w-full 
@@ -177,7 +199,7 @@ export default function EventsPage() {
           role="list"
         >
           {/* Vertical Timeline for Mobile */}
-          <div 
+          <div
             ref={timelineRef}
             className="
               md:hidden
@@ -192,7 +214,7 @@ export default function EventsPage() {
             }}
             aria-hidden="true"
           />
-          
+
           {eventsData.map((event, index) => (
             <EventsDiv
               key={`${event.eventName}-${index}`}
@@ -208,7 +230,7 @@ export default function EventsPage() {
         </div>
 
         {/* Progress Indicator (Desktop) */}
-        <div 
+        <div
           className="
             hidden md:flex 
             fixed 
@@ -229,8 +251,8 @@ export default function EventsPage() {
                 rounded-full 
                 transition-all 
                 duration-300
-                ${index === activeIndex 
-                  ? 'bg-white w-8' 
+                ${index === activeIndex
+                  ? 'bg-white w-8'
                   : 'bg-gray-500 hover:bg-gray-400'
                 }
               `}

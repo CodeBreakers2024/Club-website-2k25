@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 
 // Data object for all bento cards
 const bentoData = {
@@ -68,8 +69,8 @@ const bentoData = {
     ]
 };
 
-// Reusable BentoCard component
-const BentoCard = ({ title, description, image, isLarge, glow, borderGradient }) => (
+// Reusable BentoCard component - Memoized for performance
+const BentoCard = React.memo(({ title, description, image, isLarge, glow, borderGradient }) => (
     <div className={`m-auto flex gap-1 justify-center items-center relative p-[1px] rounded-[20px] sm:rounded-[24px] w-full ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}>
         <div className={`absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[20px] sm:rounded-[24px] ${borderGradient}`}></div>
         <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[20px] sm:rounded-[24px] m-[1.2px] bg-black"></div>
@@ -86,10 +87,12 @@ const BentoCard = ({ title, description, image, isLarge, glow, borderGradient })
             {image && (
                 <Image 
                     src={image} 
-                    alt={`${title} background`} 
+                    alt={`${title} illustration`} 
                     className='absolute top-0 right-0 opacity-60 pointer-events-none z-10 w-32 h-auto sm:w-44 md:w-56 lg:w-[250px] hidden md:block' 
                     width={250} 
-                    height={270} 
+                    height={270}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 0px, (max-width: 1024px) 224px, 250px"
                 />
             )}
             <div className={`absolute ${glow} w-120 sm:w-140 lg:w-155 h-50 sm:h-60 lg:h-70 blur-[120px] sm:blur-[140px] lg:blur-[150px] bg-[rgba(68,164,161,0.60)] z-5`} />
@@ -97,9 +100,11 @@ const BentoCard = ({ title, description, image, isLarge, glow, borderGradient })
     </div>
     </div>
     
-);
+));
 
-const Bento = ({ activeTab }) => {
+BentoCard.displayName = 'BentoCard';
+
+const Bento = React.memo(({ activeTab }) => {
     const rows = bentoData[activeTab] || [];
 
     return (
@@ -126,6 +131,8 @@ const Bento = ({ activeTab }) => {
             </div>
         </div>
     );
-};
+});
+
+Bento.displayName = 'Bento';
 
 export default Bento;

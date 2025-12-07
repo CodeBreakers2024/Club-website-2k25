@@ -46,10 +46,10 @@ const Header = () => {
               </li>
               <li>
                 <Link 
-                  href={"/about"} 
-                  className={`relative pb-1 transition-all ${pathname === "/about" ? "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-[60%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[60%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
+                  href={"/team"} 
+                  className={`relative pb-1 transition-all ${pathname === "/team" ? "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-[60%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[60%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
                 >
-                  About
+                  Our Team
                 </Link>
               </li>
               <li>
@@ -115,11 +115,11 @@ const Header = () => {
               Home
             </Link>
             <Link 
-              href={"/about"} 
-              className={`text-white py-3 px-6 transition-all duration-200 relative touch-manipulation min-h-[48px] flex items-center ${pathname === "/about" ? "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
+              href={"/team"} 
+              className={`text-white py-3 px-6 transition-all duration-200 relative touch-manipulation min-h-[48px] flex items-center ${pathname === "/team" ? "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About
+              Our Team
             </Link>
             <Link 
               href={"/achievements"} 

@@ -63,25 +63,3 @@ h6 {
 .cardBorder{
   background: linear-gradient(2300deg, #8484847c 2%, rgb(34,34,34) 12.22%, rgb(34,34,34) 82%, #84848466 98%);
 }
-/* Loader Styles */
-.loaderBorder {
-  background: linear-gradient(140deg, #41bfb7 0%, #073445 25%, #15e7e1 50%, #073445 75%, #41bfb7 100%);
-  background-size: 200% 200%;
-}
-
-.progressBorder {
-  background: linear-gradient(90deg, #7E7E7E 0%, rgb(34,34,34) 50%, #7E7E7E 100%);
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 2s infinite;
-}
