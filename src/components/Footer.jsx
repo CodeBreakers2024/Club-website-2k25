@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className='font-["Oxanium"] font-bold text-xl sm:text-2xl md:text-lg lg:text-2xl text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'>Explore</div>
                 <ul className='text-sm md:text-xs lg:text-base text-center md:text-left space-y-2 md:space-y-1.5 lg:space-y-2'>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/">Home</Link></li>
-                  <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/about">About</Link></li>
+                  <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/team">Our Team</Link></li>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/achievements">Achievements</Link></li>
                   <li className="font-semibold text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"><Link href="/events">Events</Link></li>
                 </ul>
