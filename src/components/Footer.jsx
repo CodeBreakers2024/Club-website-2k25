@@ -31,7 +31,7 @@ const Footer = () => {
                 <div className='font-["Oxanium"] font-bold text-xl sm:text-2xl md:text-lg lg:text-2xl text-transparent !bg-clip-text [background:linear-gradient(180deg,_#ffffff_0%,_#999999_100%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'>Follow Us</div>
                 <ul className='flex flex-col gap-2 sm:gap-2.5'>
                   <li><Link href="https://www.instagram.com/thecodebreakers/" target="_blank" rel="noopener noreferrer"><ButtonFooter image="instagramFooter.svg" text="@thecodebreakers" /></Link></li>
-                  <li><Link href="https://www.linkedin.com/company/thecodebreakers-rcoem/" target="_blank" rel="noopener noreferrer"><ButtonFooter image="LinkedinFooter.svg" text="@thecodebreakers" /></Link></li>
+                  <li><Link href="https://www.linkedin.com/company/thecodebreakers-rcoem/" target="_blank" rel="noopener noreferrer"><ButtonFooter image="LinkedInFooter.svg" text="@thecodebreakers" /></Link></li>
                   <li><Link href="https://x.com/CodebreakersRBU" target="_blank" rel="noopener noreferrer"><ButtonFooter image="xFooter.svg" text="@CodebreakersRBU" /></Link></li>
                 </ul>
               </div>

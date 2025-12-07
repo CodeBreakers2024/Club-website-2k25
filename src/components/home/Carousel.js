@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const carouselImages = [
-  "/carousel/tcb_1.png",
-  "/carousel/tcb_2.png",
-  "/carousel/tcb_3.png",
-  "/carousel/tcb_4.jpeg",
-  "/carousel/tcb_5.jpeg",
-  "/carousel/tcb_6.jpeg",
-  "/carousel/tcb_7.jpeg",
-  "/carousel/tcb_8.jpg",
-  "/carousel/tcb_9.jpeg",
-  "/carousel/tcb_10.jpeg",
-  "/carousel/tcb_11.jpeg",
+  "/carousel/tcb_1.webp",
+  "/carousel/tcb_2.webp",
+  "/carousel/tcb_3.webp",
+  "/carousel/tcb_4.webp",
+  "/carousel/tcb_5.webp",
+  "/carousel/tcb_6.webp",
+  "/carousel/tcb_7.webp",
+  "/carousel/tcb_8.webp",
+  "/carousel/tcb_9.webp",
+  "/carousel/tcb_10.webp",
+  "/carousel/tcb_11.webp",
 ];
 
 export default function Carousel() {

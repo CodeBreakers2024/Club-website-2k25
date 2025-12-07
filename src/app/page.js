@@ -212,7 +212,7 @@ export default function HomePage() {
                         <div className="flex-1 flex justify-end max-md:justify-center">
                             <div className="lg:h-74 lg:w-auto rounded-3xl overflow-hidden">
                                 <Image
-                                    src="/IMG_6635.jpg"
+                                    src="/carousel/tcb_7.webp"
                                     alt="The Codebreakers Club team photo"
                                     width={296}
                                     height={296}
