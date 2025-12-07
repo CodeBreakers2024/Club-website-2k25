@@ -7,14 +7,14 @@ const bentoData = {
         [
             {
                 title: "Web Development",
-                description: "Bring your ideas to life by building web apps and master the tools real developers use. Build fast, responsive sites and apps with latest web technologies.",
+                description: "Bring your ideas to life by building modern web apps and Master the tools real developers use. Build fast, responsive sites and apps with React, Next.js, and Tailwind CSS.",
                 image: "/bento/webdev.svg",
                 glow: "top-[-55%] left-[-50%]",
                 borderGradient: "bg-[linear-gradient(135deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
             },
             {
                 title: "Competitive Programming",
-                description: "Enhances coding skills through hands-on problems building sharper logic and stronger problem-solving ability.",
+                description: "Enhances coding skills through hands-on problems and timed contests .Each challenge builds sharper logic, smarter code, and stronger problem-solving ability.",
                 glow: "top-[-60%] right-[-80%]",
                 borderGradient: "bg-[linear-gradient(225deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
             }
@@ -22,13 +22,13 @@ const bentoData = {
         [
             {
                 title: "Machine Learning",
-                description: "Dive into the world of intelligent systems with hands-on projects and see how machines learn from experience.",
+                description: "Dive into the world of intelligent systems with hands-on projects. Use Python and TensorFlow to explore data, build models, and see how machines learn from experience.",
                 glow: "bottom-[-60%] left-[-90%]",
                 borderGradient: "bg-[linear-gradient(45deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
             },
             {
                 title: "Blockchain",
-                description: "Discover how blockchain powers cryptocurrencies, decentralized apps, and smart contracts. Emphasizes its role in creating trust and security across online networks.",
+                description: "Discover how blockchain powers cryptocurrencies, decentralized apps, and smart contracts . Emphasizes its role in creating trust and security across online networks.",
                 image: "/bento/blockchain.svg",
                 glow: "bottom-[-55%] right-[-50%]",
                 borderGradient: "bg-[linear-gradient(315deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
@@ -39,13 +39,13 @@ const bentoData = {
         [
             {
                 title: "Content Writing",
-                description: "Craft engaging stories and blogs that connect ideas with people.",
+                description: "We craft words that give voice to creativity and transform thoughts into impactful content that engages readers and builds connections.",
                 glow: "top-[-60%] left-[-80%]",
                 borderGradient: "bg-[linear-gradient(135deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
             },
             {
                 title: "Event Management",
-                description: "Plan, organize, and execute exciting campus and tech events.",
+                description: "Be the creative force behind the magic! Plan, organize, and execute events that bring energy, creativity, and excitement to the club from brainstorming to the big day.",
                 image: "/bento/events.svg",
                 glow: "top-[-55%] right-[-50%]",
                 borderGradient: "bg-[linear-gradient(225deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
@@ -54,14 +54,14 @@ const bentoData = {
         [
             {
                 title: "Graphic Designing",
-                description: "Explore creativity with UI/UX and graphic design experiences.",
+                description: "Design what language can’t articulate.Create visuals that highlight ideas and create a lasting impression by combining colors, concepts, and creativity.",
                 image: "/bento/graphics.svg",
                 glow: "bottom-[-55%] left-[-50%]",
                 borderGradient: "bg-[linear-gradient(45deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
             },
             {
                 title: "PR & Marketing",
-                description: "Promote events, engage audiences, and build strong community presence.",
+                description: "Spread the word, build the vibe. It shape how people see and experience our club through creative  and strong communication.",
                 glow: "bottom-[-60%] right-[-100%]",
                 borderGradient: "bg-[linear-gradient(315deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
             }

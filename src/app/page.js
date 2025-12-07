@@ -194,10 +194,8 @@ export default function HomePage() {
                             <p
                                 className={`font-['Montserrat'] lg:text-xl max-lg:text-base font-bold mb-6 text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_#999_95%)] max-lg:text-center`}
                             >
-                                The CodeBreakers is a passionate student community empowering members
-                                across all backgrounds to discover, learn, and shine in tech and
-                                creative fields. Whether you’re into coding, design, content, or
-                                event planning, you’ll find your place—and your people—right here.
+                                The CodeBreakers is not just a club  but it’s a community of dreamers, builders, and creators.
+                                It’s a space where ideas grow, skills evolve, and teamwork turns imagination into reality. Whether it’s coding, design, content, or event management here every member finds a place to explore, connect, and shine.
                             </p>
                             <Link href="/team">
                                 <button className="flex gap-1 justify-center items-center relative py-2.5 px-4.5 rounded-3xl w-fit hover:scale-105 transition-transform duration-200">
