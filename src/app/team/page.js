@@ -142,16 +142,16 @@ export default function TeamPage() {
 
         {/* Tech Team */}
         <div className="flex lg:gap-4 max-lg:gap-3 lg:mb-[70px] max-lg:mb-12 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
-          <TeamCategoryCard title="Tech Team" />
-          {data.techTeam.map((member, index) => (
+          <TeamCategoryCard title="Executives" />
+          {data.executives.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
           ))}
         </div>
 
         {/* Socials Team */}
         <div className="flex lg:gap-4 max-lg:gap-3 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
-          <TeamCategoryCard title="Graphic, Publicity & Social Media Team" />
-          {data.socialsTeam.map((member, index) => (
+          <TeamCategoryCard title="Members" />
+          {data.members.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
           ))}
         </div>
