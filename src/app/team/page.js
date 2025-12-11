@@ -43,9 +43,6 @@ function TeamMemberCard({ member }) {
           <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform">
             <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} className="lg:w-5 lg:h-5 max-lg:w-4 max-lg:h-4" />
           </Link>
-          <Link href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform">
-            <Image src="/instagram.svg" alt="Instagram" width={20} height={20} className="lg:w-5 lg:h-5 max-lg:w-4 max-lg:h-4" />
-          </Link>
         </div>
       </div>
     </div>
