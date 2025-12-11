@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/data/teamData.json";
@@ -71,6 +72,75 @@ function TeamCategoryCard({ title }) {
 
 
 export default function TeamPage() {
+  const coreTeamRef = useRef(null);
+  const executivesRef = useRef(null);
+  const membersRef = useRef(null);
+
+  useEffect(() => {
+    const setupHorizontalScroll = (container) => {
+      if (!container) return;
+
+      let animationFrameId = null;
+      let scrollVelocity = 0;
+      let lastScrollTime = 0;
+
+      const handleWheel = (e) => {
+        const canScrollRight = container.scrollLeft < container.scrollWidth - container.clientWidth;
+        const canScrollLeft = container.scrollLeft > 0;
+        
+        const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+        
+        if (isHorizontalScroll || (e.deltaY !== 0 && (canScrollLeft || canScrollRight))) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const scrollAmount = (e.deltaY || e.deltaX) * 0.5;
+          scrollVelocity = scrollAmount;
+          lastScrollTime = Date.now();
+          
+          // Cancel any existing animation
+          if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+          }
+          
+          // Start smooth scrolling with momentum
+          const smoothScroll = () => {
+            container.scrollLeft += scrollVelocity;
+            scrollVelocity *= 0.92; // Friction factor
+            
+            if (Math.abs(scrollVelocity) > 0.1) {
+              animationFrameId = requestAnimationFrame(smoothScroll);
+            } else {
+              scrollVelocity = 0;
+            }
+          };
+          
+          animationFrameId = requestAnimationFrame(smoothScroll);
+          return false;
+        }
+      };
+
+      container.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+
+      return () => {
+        container.removeEventListener('wheel', handleWheel, { capture: true });
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+        }
+      };
+    };
+
+    const cleanup1 = setupHorizontalScroll(coreTeamRef.current);
+    const cleanup2 = setupHorizontalScroll(executivesRef.current);
+    const cleanup3 = setupHorizontalScroll(membersRef.current);
+
+    return () => {
+      cleanup1?.();
+      cleanup2?.();
+      cleanup3?.();
+    };
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -133,7 +203,7 @@ export default function TeamPage() {
         </h2>
 
         {/* Core Team */}
-        <div className="flex lg:gap-4 max-lg:gap-3 lg:mb-[70px] max-lg:mb-12 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
+        <div ref={coreTeamRef} className="flex lg:gap-4 max-lg:gap-3 lg:mb-[70px] max-lg:mb-12 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
           <TeamCategoryCard title="Core Team" />
           {data.coreTeam.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
@@ -141,7 +211,7 @@ export default function TeamPage() {
         </div>
 
         {/* Tech Team */}
-        <div className="flex lg:gap-4 max-lg:gap-3 lg:mb-[70px] max-lg:mb-12 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
+        <div ref={executivesRef} className="flex lg:gap-4 max-lg:gap-3 lg:mb-[70px] max-lg:mb-12 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
           <TeamCategoryCard title="Executives" />
           {data.executives.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
@@ -149,7 +219,7 @@ export default function TeamPage() {
         </div>
 
         {/* Socials Team */}
-        <div className="flex lg:gap-4 max-lg:gap-3 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
+        <div ref={membersRef} className="flex lg:gap-4 max-lg:gap-3 overflow-x-auto pb-4 no-scrollbar lg:px-8 max-lg:px-0">
           <TeamCategoryCard title="Members" />
           {data.members.map((member, index) => (
             <TeamMemberCard key={index} member={member} />

@@ -16,6 +16,9 @@ export default function SmoothScroll({ children }) {
       infinite: false,
     });
 
+    // Store Lenis instance on window for access in other components
+    window.lenisInstance = lenis;
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -25,6 +28,7 @@ export default function SmoothScroll({ children }) {
 
     return () => {
       lenis.destroy();
+      delete window.lenisInstance;
     };
   }, []);
 
