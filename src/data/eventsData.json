@@ -1,28 +1,22 @@
 {
   "events": [
     {
-      "eventName": "Code Construct",
-      "eventDate": "September 2025",
-      "imageUrl": "/IMG_6635.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
+      "eventName": "Hacksphere 2.0",
+      "eventDate": "March 2025",
+      "imageUrl": "/events/hacksphere2.webp",
+      "description": "HACKSPHERE 2.0 was a collaborative hackathon with two rounds: an online Ideathon, followed by an onsite hackathon for the top teams. Over 800+ people and 279 teams participated. Top teams competed for the price pool of ₹15,000."
     },
     {
-      "eventName": "Code Construct",
-      "eventDate": "September 2025",
-      "imageUrl": "/IMG_6635.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
+      "eventName": "Carnival Carousel",
+      "eventDate": "February 2025",
+      "imageUrl": "/events/carnivalcarousel.webp",
+      "description": "The Carnival Carousel was a 3-day fun-filled ride with quick and exciting games in Sikke Di Hera Pheri, brain crushing coding puzzles in Decode Junction and finally Catch the Flag in Khul ja sim sim."
     },
     {
-      "eventName": "Code Construct",
-      "eventDate": "September 2025",
-      "imageUrl": "/IMG_6635.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
-    },
-    {
-      "eventName": "Code Construct",
-      "eventDate": "September 2025",
-      "imageUrl": "/IMG_6635.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
+      "eventName": "Fizzbuzz 2.0",
+      "eventDate": "September 2024",
+      "imageUrl": "/events/fizzbuzz2.webp",
+      "description": "FizzBuzz 2.0 a wave of enjoyment, encourages teamwork, logic-building, through friendly competition. With nearly 100+ team registrations, and a price-pool of ₹6000!"
     }
   ]
 }

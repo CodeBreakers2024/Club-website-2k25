@@ -21,7 +21,7 @@ const AchievementCard = ({ imageUrl, gridClass }) => {
 
 const PlacementCard = ({ data }) => {
   return (
-    <div className="m-auto flex gap-1 justify-center items-center relative p-1 max-sm:p-[2.5px] rounded-[2.5rem] max-sm:rounded-[1.5rem] w-fit font-['Montserrat']">
+    <div className="flex gap-1 justify-center items-center relative p-1 max-sm:p-[2.5px] rounded-[2.5rem] max-sm:rounded-[1.5rem] w-full max-w-[320px] mx-auto font-['Montserrat']">
       <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[2.5rem] max-sm:rounded-[1.5rem] cardBorder"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[2.5rem] max-sm:rounded-[1.5rem] m-[1.2px] bg-black"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-[2.5rem] max-sm:rounded-[1.5rem] m-[1.2px] overflow-hidden bg-[rgba(0,0,0,0.06)] shadow-[0_4px_4px_0_rgba(0,0,0,0.25),_61px_121px_38px_0_rgba(0,0,0,0.04),_22px_43px_29px_0_rgba(0,0,0,0.10)]">
@@ -32,17 +32,17 @@ const PlacementCard = ({ data }) => {
         <div className="backdrop-blur-[7.5px] backdrop-filter overflow-hidden rounded-[2.5rem] max-sm:rounded-[1.25rem] w-[100%] aspect-square relative mb-4 max-sm:mb-3">
           <Image src={data.imageUrl} alt={data.name} fill className="object-cover" />
         </div>
-        <div className="flex flex-col gap-4 max-sm:gap-2.5 p-5 max-sm:px-3 max-sm:py-0">
+        <div className="flex flex-col gap-4 max-sm:gap-2.5 p-5 max-sm:px-3 max-sm:py-0 flex-1">
           <div className="flex flex-col gap-2 max-sm:gap-1 max-sm:text-center">
             <h3 className={`text-white text-[24px] max-sm:text-[14px] font-semibold m-0 leading-tight`}>{data.name}</h3>
-            <p className={`text-[#ebebeb] text-[14px] max-sm:text-[10px] font-normal m-0 leading-[1.5] max-sm:line-clamp-2 opacity-90`}>{data.role}</p>
+            <p className={`text-[#ebebeb] text-[14px] max-sm:text-[10px] font-normal m-0 leading-[1.5] opacity-90`}>{data.designation}</p>
           </div>
-          <div className="flex items-center justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2.5">
+          <div className="flex items-center justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2.5 mt-auto">
             <div className="flex items-center gap-2 max-sm:gap-2">
-              <Link href={data.githubUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+              <Link href={data.githubUrl || '#'} target="_blank" rel="noopener noreferrer" className="cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
                 <Image src="/github.svg" alt="GitHub" width={21} height={21} className="w-[21px] h-[21px] max-sm:w-[18px] max-sm:h-[18px] cursor-pointer" />
               </Link>
-              <Link href={data.linkedinUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+              <Link href={data.linkedinUrl || '#'} target="_blank" rel="noopener noreferrer" className="cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
                 <Image src="/linkedin.svg" alt="LinkedIn" width={21} height={21} className="w-[21px] h-[21px] max-sm:w-[18px] max-sm:h-[18px] cursor-pointer" />
               </Link>
             </div>
@@ -50,7 +50,7 @@ const PlacementCard = ({ data }) => {
               <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-full buttonBorder"></div>
               <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-full m-[1.2px] bg-black"></div>
               <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-full m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"></div>
-              <p className="font-['Montserrat'] text-sm max-sm:text-[9px] font-semibold text-white z-4 whitespace-nowrap">Accenture - 12 LPA</p>
+              <p className="font-['Montserrat'] text-sm max-sm:text-[9px] font-semibold text-white z-4 whitespace-nowrap">{data.company} - {data.package}</p>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const PlacementCard = ({ data }) => {
 
 const HackathonCard = ({ data, onViewMore }) => {
   return (
-    <div className="m-auto flex gap-1 justify-center items-center relative p-1 max-sm:p-[2.5px] rounded-[2.5rem] max-sm:rounded-[1.5rem] w-fit font-['Montserrat']">
+    <div className="flex gap-1 justify-center items-center relative p-1 max-sm:p-[2.5px] rounded-[2.5rem] max-sm:rounded-[1.5rem] w-full max-w-[320px] mx-auto font-['Montserrat']">
       <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[2.5rem] max-sm:rounded-[1.5rem] cardBorder"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[2.5rem] max-sm:rounded-[1.5rem] m-[1.2px] bg-black"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-[2.5rem] max-sm:rounded-[1.5rem] m-[1.2px] overflow-hidden bg-[rgba(0,0,0,0.06)] shadow-[0_4px_4px_0_rgba(0,0,0,0.25),_61px_121px_38px_0_rgba(0,0,0,0.04),_22px_43px_29px_0_rgba(0,0,0,0.10)]">
@@ -70,14 +70,13 @@ const HackathonCard = ({ data, onViewMore }) => {
       </div>
       <div className="rounded-[2.5rem] max-sm:rounded-[1.4rem] overflow-hidden relative p-2 max-sm:p-1.5 z-4 w-full h-full flex flex-col">
         <div className="backdrop-blur-[7.5px] backdrop-filter overflow-hidden rounded-[2.5rem] max-sm:rounded-[1.25rem] w-[100%] aspect-square relative mb-4 max-sm:mb-3">
-          <Image src={data.imageUrl} alt={data.name} fill className="object-cover" />
+          <Image src={data.imageUrl} alt={data.name} fill className="object-cover object-top" />
         </div>
-        <div className="flex flex-col gap-4 max-sm:gap-2.5 p-5 max-sm:px-3 max-sm:py-0 max-sm:pb-2.5">
+        <div className="flex flex-col gap-4 max-sm:gap-2.5 p-5 max-sm:px-3 max-sm:py-0 max-sm:pb-2.5 flex-1">
           <div className="flex flex-col gap-2 max-sm:gap-1 max-sm:text-center">
             <h3 className={`text-white text-[24px] max-sm:text-[14px] font-semibold m-0 leading-tight`}>{data.name}</h3>
-            <p className={`text-[#ebebeb] text-[14px] max-sm:text-[10px] font-normal m-0 leading-[1.5] max-sm:line-clamp-2 opacity-90`}>{data.role}</p>
           </div>
-          <div className="flex items-center justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2.5">
+          <div className="flex items-center justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2.5 mt-auto">
             <div className="flex items-center gap-2 max-sm:gap-2">
               <Link href={data.githubUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
                 <Image src="/github.svg" alt="GitHub" width={21} height={21} className="w-[21px] h-[21px] max-sm:w-[18px] max-sm:h-[18px] cursor-pointer" />
@@ -243,7 +242,7 @@ const AchievementsPage = () => {
                     <li key={index}>{achievement}</li>
                   ))}
                 </ul>
-                <div className="flex flex-row justify-between items-center mt-auto border-t border-white/10 pt-3 sm:pt-4">
+                <div className="flex flex-row justify-start items-center mt-auto border-t border-white/10 pt-3 sm:pt-4">
                   <div className="flex items-center gap-2 sm:gap-3">
                     <Link href={selectedCard.githubUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                       <Image src="/github.svg" alt="GitHub" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 cursor-pointer" />
@@ -251,12 +250,6 @@ const AchievementsPage = () => {
                     <Link href={selectedCard.linkedinUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                       <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 cursor-pointer" />
                     </Link>
-                  </div>
-                  <div className="flex gap-1 justify-center items-center relative py-1.5 px-3 sm:py-2 sm:px-4 rounded-3xl w-fit">
-                    <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-3xl buttonBorder"></div>
-                    <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-3xl m-[1.2px] bg-black"></div>
-                    <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-3xl m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"></div>
-                    <p className="font-['Montserrat'] text-[10px] sm:text-sm font-semibold text-white z-4 whitespace-nowrap">{selectedCard.company}</p>
                   </div>
                 </div>
               </div>
