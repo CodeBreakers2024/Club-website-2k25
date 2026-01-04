@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "eventName": "Code Construct",
+      "eventDate": "September 2025",
+      "imageUrl": "/events/code-construct.webp",
+      "description": "Code Construct was a one day event focused on hands-on learning experience designed to introduce participants to the power of AI. The event focused on practical usage, interactive sessions, and real world applications of AI tools."
+    },
+    {
       "eventName": "Hacksphere 2.0",
       "eventDate": "March 2025",
       "imageUrl": "/events/hacksphere2.webp",
