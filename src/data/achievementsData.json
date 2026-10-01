@@ -2,146 +2,16 @@
   "placements": [
     {
       "id": 1,
-      "name": "Aakarsh Verma",
-      "company": "Infosys",
+      "name": "Om Chillure",
+      "company": "XAI",
       "designation": "Software Engineer",
-      "package": "7 LPA",
-      "imageUrl": "/team/Aakarsh_Verma.webp",
-      "githubUrl": "https://github.com/aakarsh-v",
-      "linkedinUrl": "https://www.linkedin.com/in/aakarsh-verma-169088248/"
+      "package": "50+ LPA",
+      "imageUrl": "/team/Om_Chillure.webp",
+      "githubUrl": "https://github.com/OmChillure",
+      "linkedinUrl": "https://www.linkedin.com/in/omchillure"
     },
     {
       "id": 2,
-      "name": "Mohd. Shayan Qureshi",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "7 LPA",
-      "imageUrl": "/team/Mohd_Shayan_Qureshi.webp",
-      "githubUrl": "https://github.com/MohdShayan",
-      "linkedinUrl": "https://www.linkedin.com/in/mohdshayan"
-    },
-    {
-      "id": 3,
-      "name": "Moli Agrawal",
-      "company": "Opus Tech",
-      "designation": "Software Engineer",
-      "package": "7 LPA",
-      "imageUrl": "/team/Moli_Agrawal.webp",
-      "githubUrl": "https://github.com/moliagrawal",
-      "linkedinUrl": "https://www.linkedin.com/in/moli-a-b99a2121b/"
-    },
-    {
-      "id": 4,
-      "name": "Netal Sarda",
-      "company": "Almashines",
-      "designation": "Business Analyst",
-      "package": "8 LPA",
-      "imageUrl": "/placement/netal-sarda.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/netal-sarda11"
-    },
-    {
-      "id": 5,
-      "name": "Aditya Pande",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "11 LPA",
-      "imageUrl": "/team/Aditya_Pande.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/aditya-s-pande/"
-    },
-    {
-      "id": 6,
-      "name": "Aditya Yadav",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "11 LPA",
-      "imageUrl": "/team/Aditya_Yadav.webp",
-      "githubUrl": "https://github.com/aditya-7-yadav",
-      "linkedinUrl": "https://www.linkedin.com/in/aditya7yadav/"
-    },
-    {
-      "id": 7,
-      "name": "Ikshit Talera",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "11 LPA",
-      "imageUrl": "/team/Ikshit_Talera.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/ikshit04"
-    },
-    {
-      "id": 8,
-      "name": "Lavanya Chawla",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "11 LPA",
-      "imageUrl": "/team/Lavanya_Chawla.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/lavanya-chawla/"
-    },
-    {
-      "id": 9,
-      "name": "Tejas Singh",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "11 LPA",
-      "imageUrl": "/team/Tejas_Singh.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/tejas-singh-ts27/"
-    },
-    {
-      "id": 10,
-      "name": "Pranit Rathkanthiwar",
-      "company": "PTC",
-      "designation": "Software Engineer",
-      "package": "14 LPA",
-      "imageUrl": "/team/Pranit_Rathkanthiwar.webp",
-      "githubUrl": "https://github.com/itspranit",
-      "linkedinUrl": "https://www.linkedin.com/in/pranit-rathkanthiwar/"
-    },
-    {
-      "id": 11,
-      "name": "Prathamesh Rajbhoj",
-      "company": "Kickdrum",
-      "designation": "SDE 1",
-      "package": "16 LPA",
-      "imageUrl": "/placement/prathamesh-rajbhoj.webp",
-      "githubUrl": "https://github.com/Pratham2301",
-      "linkedinUrl": "https://in.linkedin.com/in/prathamesh-rajbhoj-2bb157200"
-    },
-    {
-      "id": 12,
-      "name": "Anas Khan",
-      "company": "Porter",
-      "designation": "Software Engineer",
-      "package": "19 LPA",
-      "imageUrl": "/team/Anas_Khan.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/anasmkhan/"
-    },
-    {
-      "id": 13,
-      "name": "Harshit Sahu",
-      "company": "Porter",
-      "designation": "Software Engineer",
-      "package": "19 LPA",
-      "imageUrl": "/team/Harshit_Sahu.webp",
-      "githubUrl": "https://github.com/HarshitSahu01/",
-      "linkedinUrl": "https://www.linkedin.com/in/harshit-sahu01/"
-    },
-    {
-      "id": 14,
-      "name": "Mushan Khan",
-      "company": "Infosys",
-      "designation": "Software Engineer",
-      "package": "21 LPA",
-      "imageUrl": "/team/Mushan_Khan.webp",
-      "githubUrl": "",
-      "linkedinUrl": "https://www.linkedin.com/in/mushankhan/"
-    },
-    {
-      "id": 15,
       "name": "Suyog Parkhi",
       "company": "Juspay",
       "designation": "Product Engineer",
@@ -151,14 +21,144 @@
       "linkedinUrl": "https://www.linkedin.com/in/suyogparkhi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
-      "id": 16,
-      "name": "Om Chillure",
-      "company": "XAI",
+      "id": 3,
+      "name": "Mushan Khan",
+      "company": "Infosys",
       "designation": "Software Engineer",
-      "package": "50+ LPA",
-      "imageUrl": "/team/Om_Chillure.webp",
-      "githubUrl": "https://github.com/OmChillure",
-      "linkedinUrl": "https://www.linkedin.com/in/omchillure"
+      "package": "21 LPA",
+      "imageUrl": "/team/Mushan_Khan.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/mushankhan/"
+    },
+    {
+      "id": 4,
+      "name": "Harshit Sahu",
+      "company": "Porter",
+      "designation": "Software Engineer",
+      "package": "19 LPA",
+      "imageUrl": "/team/Harshit_Sahu.webp",
+      "githubUrl": "https://github.com/HarshitSahu01/",
+      "linkedinUrl": "https://www.linkedin.com/in/harshit-sahu01/"
+    },
+    {
+      "id": 5,
+      "name": "Anas Khan",
+      "company": "Porter",
+      "designation": "Software Engineer",
+      "package": "19 LPA",
+      "imageUrl": "/team/Anas_Khan.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/anasmkhan/"
+    },
+    {
+      "id": 6,
+      "name": "Prathamesh Rajbhoj",
+      "company": "Kickdrum",
+      "designation": "SDE 1",
+      "package": "16 LPA",
+      "imageUrl": "/placement/prathamesh-rajbhoj.webp",
+      "githubUrl": "https://github.com/Pratham2301",
+      "linkedinUrl": "https://in.linkedin.com/in/prathamesh-rajbhoj-2bb157200"
+    },
+    {
+      "id": 7,
+      "name": "Pranit Rathkanthiwar",
+      "company": "PTC",
+      "designation": "Software Engineer",
+      "package": "14 LPA",
+      "imageUrl": "/team/Pranit_Rathkanthiwar.webp",
+      "githubUrl": "https://github.com/itspranit",
+      "linkedinUrl": "https://www.linkedin.com/in/pranit-rathkanthiwar/"
+    },
+    {
+      "id": 8,
+      "name": "Tejas Singh",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "11 LPA",
+      "imageUrl": "/team/Tejas_Singh.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/tejas-singh-ts27/"
+    },
+    {
+      "id": 9,
+      "name": "Lavanya Chawla",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "11 LPA",
+      "imageUrl": "/team/Lavanya_Chawla.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/lavanya-chawla/"
+    },
+    {
+      "id": 10,
+      "name": "Ikshit Talera",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "11 LPA",
+      "imageUrl": "/team/Ikshit_Talera.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/ikshit04"
+    },
+    {
+      "id": 11,
+      "name": "Aditya Yadav",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "11 LPA",
+      "imageUrl": "/team/Aditya_Yadav.webp",
+      "githubUrl": "https://github.com/aditya-7-yadav",
+      "linkedinUrl": "https://www.linkedin.com/in/aditya7yadav/"
+    },
+    {
+      "id": 12,
+      "name": "Aditya Pande",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "11 LPA",
+      "imageUrl": "/team/Aditya_Pande.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/aditya-s-pande/"
+    },
+    {
+      "id": 13,
+      "name": "Netal Sarda",
+      "company": "Almashines",
+      "designation": "Business Analyst",
+      "package": "8 LPA",
+      "imageUrl": "/placement/netal-sarda.webp",
+      "githubUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/netal-sarda11"
+    },
+    {
+      "id": 14,
+      "name": "Moli Agrawal",
+      "company": "Opus Tech",
+      "designation": "Software Engineer",
+      "package": "7 LPA",
+      "imageUrl": "/team/Moli_Agrawal.webp",
+      "githubUrl": "https://github.com/moliagrawal",
+      "linkedinUrl": "https://www.linkedin.com/in/moli-a-b99a2121b/"
+    },
+    {
+      "id": 15,
+      "name": "Mohd. Shayan Qureshi",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "7 LPA",
+      "imageUrl": "/team/Mohd_Shayan_Qureshi.webp",
+      "githubUrl": "https://github.com/MohdShayan",
+      "linkedinUrl": "https://www.linkedin.com/in/mohdshayan"
+    },
+    {
+      "id": 16,
+      "name": "Aakarsh Verma",
+      "company": "Infosys",
+      "designation": "Software Engineer",
+      "package": "7 LPA",
+      "imageUrl": "/team/Aakarsh_Verma.webp",
+      "githubUrl": "https://github.com/aakarsh-v",
+      "linkedinUrl": "https://www.linkedin.com/in/aakarsh-verma-169088248/"
     }
   ],
   "hackathons": [
